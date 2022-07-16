@@ -50,7 +50,7 @@ body {
   border-radius: 8px;
   padding: 5px;
   background-color: rgb(165, 162, 162);
-  font-size: 6vh;
+  font-size: 50px;
   font-family: Agency FB;
   overflow: hidden;
 }
@@ -76,6 +76,7 @@ body {
   font-size: 30px;
   font-family: Agency FB;
   cursor: pointer;
+  outline: none;
   /* padding: 20px; */
 }
 .clr_btn {
