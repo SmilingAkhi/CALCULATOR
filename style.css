@@ -79,16 +79,7 @@ body {
   outline: none;
   /* padding: 20px; */
 }
-.clr_btn {
-  margin-top: 5px;
-  margin-left: 5px;
-  width: 70px;
-  height: 20px;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-  background-color: orange;
-}
+
 .signs {
   background-color: rgb(58, 80, 82);
 }
@@ -101,7 +92,24 @@ body {
 .num:hover {
   background-color: rgb(114, 112, 112);
 }
-.del_signs,
+.del_btn,
 .equal_signs {
   background-color: orange;
+}
+
+.clr_del_container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.eraser {
+  margin-top: 5px;
+  margin-left: 5px;
+  width: 80px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: orange;
+  font-size: 12px;
 }

@@ -11,26 +11,32 @@
     <div class="container">
       <div class="calculator">
         <div class="display_container">
-          <div class="display">012345</div>
+            <input type="number" class="display" >
         </div>
         <div class="line"></div>
-        <button class="clr_btn">CLR</button>
+        <div class="clr_del_container">
+          <button class=" btn eraser clr_btn" >CLR</button>
+          <button class=" eraser del_btn">DEL</button>
+        </div>
         <div class="keyboard">
-          <button class="btn del_signs">DEL</button>
-          <button class="btn signs">.</button>
-          <button class="btn signs">/</button>
-          <button class="btn signs">X</button>
-          <button class="btn num">1</button>
-          <button class="btn num">2</button>
-          <button class="btn num">3</button>
-          <button class="btn signs">-</button>
-          <button class="btn num">4</button>
-          <button class="btn num">5</button>
-          <button class="btn num">6</button>
-          <button class="btn signs">+</button>
-          <button class="btn num">7</button>
-          <button class="btn num">8</button>
-          <button class="btn num">9</button>
+          <button class="btn num" value="1">1</button>
+          <button class="btn num" value="2">2</button>
+          <button class="btn num" value="3">3</button>
+          <button class="btn signs" value="x" type="number">x</button>
+
+          <button class="btn num" value="4">4</button>
+          <button class="btn num" value="5">5</button>
+          <button class="btn num" value="6">6</button>
+          <button class="btn signs" value="-">-</button>
+          <button class="btn num" value="7">7</button>
+          <button class="btn num" value="8">8</button>
+          <button class="btn num" value="9">9</button>
+
+          <button class="btn signs" value="+">+</button>
+          <button class="btn num" value="0">0</button>
+          <button class="btn signs" value=".">.</button>
+          <button class="btn signs" value="&#247">&#247</button>
+
           <button class="btn equal_signs">=</button>
         </div>
       </div>
