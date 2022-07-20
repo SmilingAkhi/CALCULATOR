@@ -1,6 +1,6 @@
 "use strict";
 console.log("working");
-let display = document.querySelector(".display").value;
+let display = document.querySelector(".display");
 
 const clearBtn = document.querySelector(".clr_btn");
 clearBtn.addEventListener("click", () => {
@@ -39,22 +39,33 @@ function operate(a, b, operator) {
   } else operator === "*";
   return multiply(a, b);
 }
-console.log(operate(2, 3, "-"));
+// console.log(operate(2, 3, "-"));
 
-const displayValue = function pickValue() {
+function pickValue() {
   let keys = document.querySelectorAll(".btn");
 
   keys.forEach((key) => {
     key.addEventListener("click", () => {
-      const clickedKey = key.textContent;
-      console.log(clickedKey);
-      display += clickedKey;
+      let display = document.querySelector(".display").value;
       console.log(display);
-      const error = (document.querySelector(".display").value = display);
-      console.log(error);
+      const clickedKey = key.value;
+
+      display += clickedKey;
+      const displayValue = (document.querySelector(".display").value = display);
+
+      return displayValue;
     });
   });
-};
-// pickValue();
+  const operators = document.querySelectorAll(".signs");
+  operators.forEach((operator) => {
+    operator.addEventListener("click", () => {
+      display = document.querySelector(".display");
+      const operatorClicked = operator.value;
 
-displayValue();
+      display.value = operatorClicked;
+      display = document.querySelector(".display");
+    });
+  });
+}
+
+pickValue();
