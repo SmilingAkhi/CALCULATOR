@@ -46,12 +46,12 @@ function pickValue() {
 
   keys.forEach((key) => {
     key.addEventListener("click", () => {
-      let display = document.querySelector(".display").value;
+      let display = document.querySelector(".display").textContent;
       console.log(display);
       const clickedKey = key.value;
-
       display += clickedKey;
-      const displayValue = (document.querySelector(".display").value = display);
+      const displayValue = (document.querySelector(".display").textContent =
+        display);
 
       return displayValue;
     });
@@ -61,8 +61,7 @@ function pickValue() {
     operator.addEventListener("click", () => {
       display = document.querySelector(".display");
       const operatorClicked = operator.value;
-
-      display.value = operatorClicked;
+      display.textContent = operatorClicked;
       display = document.querySelector(".display");
     });
   });
