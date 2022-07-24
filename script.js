@@ -1,11 +1,14 @@
 "use strict";
 console.log("working");
-let display = document.querySelector(".display");
-
+let display = document.querySelector(".display").textContent;
+let firstValue;
+let operatorChosen;
+let currentValue;
 const clearBtn = document.querySelector(".clr_btn");
-clearBtn.addEventListener("click", () => {
-  display = "";
-});
+
+// clearBtn.addEventListener("click", () => {
+//   display = "";
+// });
 
 //Add function
 function add(a, b) {
@@ -46,23 +49,31 @@ function pickValue() {
 
   keys.forEach((key) => {
     key.addEventListener("click", () => {
-      let display = document.querySelector(".display").textContent;
-      console.log(display);
+      display = document.querySelector(".display").textContent;
+      // console.log(display);
       const clickedKey = key.value;
       display += clickedKey;
+      const trial = display.replace(/[\W]/g, " ");
       const displayValue = (document.querySelector(".display").textContent =
-        display);
+        trial);
+      firstValue = displayValue;
 
-      return displayValue;
+      const fesValue = firstValue;
+      console.log(`fesValue = ${fesValue}`);
+      currentValue = displayValue;
+
+      console.log(`currentValue = ${currentValue}`);
     });
   });
+
   const operators = document.querySelectorAll(".signs");
   operators.forEach((operator) => {
     operator.addEventListener("click", () => {
-      display = document.querySelector(".display");
+      let display = document.querySelector(".display");
       const operatorClicked = operator.value;
+      operatorChosen = operatorClicked;
+      console.log(`operatorChosen = ${operatorChosen}`);
       display.textContent = operatorClicked;
-      display = document.querySelector(".display");
     });
   });
 }
